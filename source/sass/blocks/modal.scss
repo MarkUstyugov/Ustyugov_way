@@ -1,0 +1,36 @@
+.modal {
+  margin: 0 auto;
+  width: 728px;
+  min-height: 444px;
+  background-color: $white-extra;
+
+  position: fixed;
+  top: 50%;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  right: 0;
+  left: 0;
+  z-index: 200;
+
+  @media (max-width: 767px) {
+    width: 320px;
+    min-height: 568px;
+    background-color: $white;
+  }
+}
+
+.modal__close-button {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url(../img/close-button-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}

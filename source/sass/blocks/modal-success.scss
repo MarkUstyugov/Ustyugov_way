@@ -1,0 +1,29 @@
+.modal-success {
+  display: none;
+  box-sizing: border-box;
+
+  align-items: center;
+  justify-content: center;
+
+  &--active {
+    display: flex;
+  }
+
+  @media (max-width: 767px) {
+    padding: 16px;
+  }
+}
+
+.modal-success__text {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 43px;
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+    line-height: 37px;
+  }
+}

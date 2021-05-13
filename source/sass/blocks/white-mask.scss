@@ -1,0 +1,15 @@
+.white-mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  opacity: 0.9;
+
+  &--active {
+    display: block;
+  }
+}

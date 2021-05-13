@@ -1,0 +1,245 @@
+.header {
+  min-width: 320px;
+}
+
+.header--active-no-js {
+  @media (max-width: 1023px) {
+    .header__logo--hide {
+      display: none;
+    }
+
+    .header__navigation--active {
+      display: block;
+      background-color: $white;
+      padding: 134px 0;
+    }
+
+    .header__toggle--active {
+      width: 52px;
+      height: 50px;
+      background-color: transparent;
+      background-image: url("../img/close-button-icon.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.header--active {
+  @media (max-width: 1023px) {
+    .header__logo--hide {
+      display: none;
+    }
+
+    .header__navigation--active {
+      display: block;
+      position: absolute;
+      top: 50px;
+      background-color: $white;
+      z-index: 2;
+    }
+
+    .header__toggle--active {
+      width: 52px;
+      height: 50px;
+      background-color: transparent;
+      background-image: url("../img/close-button-icon.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.header__container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (max-width: 1023px) {
+    padding: 0;
+  }
+}
+
+.header__inner {
+  min-height: 99px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+
+  @media (max-width: 1023px) {
+    min-height: 50px;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.header__logo {
+  margin: 10px 0 0 0;
+
+  @media (max-width: 1023px) {
+    margin: 0 0 0 21px;
+  }
+
+  @media (max-width: 767px) {
+    margin-left: 16px;
+  }
+}
+
+.header__logo svg {
+  @media (max-width: 1023px) {
+    width: 44px;
+    height: 17px;
+    display: block;
+  }
+}
+
+.header__navigation {
+  margin-left: auto;
+  margin-right: 57px;
+
+  @media (max-width: 1023px) {
+    display: none;
+    margin: 0;
+    padding: 84px 0;
+    width: 100%;
+    min-height: 568px;
+    box-sizing: border-box;
+  }
+}
+
+.header__navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.header__navigation-item {
+  margin-right: 38px;
+
+  @media (max-width: 1023px) {
+    margin: 0 0 30px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 7.4px;
+      height: 12px;
+      background-image: url("../img/nav-arrow.svg");
+      background-repeat: no-repeat;
+      top: 50%;
+      right: 24.6px;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+.header__navigation-link {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  color: $black;
+
+  &:hover {
+    color: $pink;
+  }
+
+  @media (max-width: 1023px) {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #48494d;
+    background-color: $white-extra;
+    padding: 17px 60px 17px 16px;
+  }
+}
+
+.header__phone {
+  font-size: 18px;
+  line-height: 32px;
+  text-decoration-color: $black;
+  color: $black;
+  position: relative;
+  margin-top: 4px;
+  margin-right: 15px;
+
+  &:hover {
+    color: $pink;
+    text-decoration-color: $pink;
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.header__phone-icon {
+  position: absolute;
+  top: 3px;
+  left: -38px;
+  fill: none;
+  stroke: $black;
+}
+
+.header__phone:hover svg {
+  stroke: $pink;
+}
+
+.header__toggle {
+  display: none;
+
+  @media (max-width: 1023px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 72px;
+    height: 50px;
+    border: 0;
+    cursor: pointer;
+    background-color: $pink;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 17.5px;
+      left: 24.75px;
+      width: 22.5px;
+      height: 1px;
+      background-color: $white;
+      box-shadow: 0 6px 0 0 $white, 0 12px 0 0 $white;
+    }
+  }
+
+  @media (max-width: 767px) {
+    width: 50px;
+
+    &::before {
+      top: 17.5px;
+      left: 13.75px;
+    }
+  }
+}
+
+

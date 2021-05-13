@@ -1,0 +1,387 @@
+.price {
+  min-width: 320px;
+}
+
+.price__container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media (max-width: 1023px) {
+    padding: 0 23px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 16px;
+  }
+}
+
+.price__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 138px;
+
+  @media(max-width: 1100px) {
+    justify-content: space-evenly;
+    padding-top: 112px;
+  }
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    padding-bottom: 112px;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    padding-top: 110px;
+    padding-bottom: 20px;
+  }
+}
+
+.price__header {
+  order: 1;
+  box-sizing: border-box;
+  padding: 117px 0 0;
+  width: 291px;
+
+  @media (max-width: 1023px) {
+    width: auto;
+    padding: 0;
+    order: -1;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  @media(max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+
+.price__title {
+  padding: 0 0 23px 0;
+  margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 175px;
+    background-color: $pink;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media (max-width: 1023px) {
+    margin-bottom: 22px;
+    padding: 0;
+  }
+
+  @media(max-width: 767px) {
+    margin-bottom: 20px;
+  }
+}
+
+.price__text {
+  font-size: 16px;
+  line-height: 27px;
+  color: $black-main;
+  margin: 0;
+  margin-bottom: 61px;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 32px;
+  }
+
+  @media(max-width: 767px) {
+    margin-bottom: 18px;
+  }
+}
+
+.price__call-us {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  color: $black;
+  text-align: center;
+  margin: 0 0 8px 5px;
+
+  @media (max-width: 1023px) {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    line-height: 34px;
+  }
+}
+
+.price__phone {
+  display: inline-block;
+  margin-left: 45px;
+  font-size: 20px;
+  line-height: 32px;
+  color: $pure-black;
+  text-decoration: none;
+  position: relative;
+
+  @media (max-width: 1023px) {
+    margin: 0;
+    font-size: 18px;
+    line-height: 34px;
+    font-size: 18px;
+    line-height: 32px;
+    color: $pink;
+  }
+}
+
+.price__phone-icon {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  fill: none;
+  stroke: $pink;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.price__tariffs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 5px;
+  width: 770px;
+
+  @media (max-width: 1100px) {
+    justify-content: center;
+    width: 627px;
+  }
+
+  @media (max-width: 1023px) {
+    width: 627px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 288px;
+  }
+}
+
+.price__icon {
+  fill: $pink;
+}
+
+.price__column {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  min-height: 672px;
+  border: 1px solid $black-special;
+  border-radius: 6px;
+  padding: 40px 30px 30px 30px;
+  margin-bottom: 10px;
+
+  &:hover {
+    border: 3px solid $pink;
+    border-radius: 6px;
+    padding: 38px 28px 28px 28px;
+  }
+
+  &:hover .price__tariffs-text {
+    border-bottom: 1px solid $pink-special;
+  }
+
+  &:hover .price__icon {
+    fill: $black;
+  }
+
+  &:hover .price__taroffs-cost {
+    color: $pink;
+  }
+
+  &:hover .price__tariffs-title {
+    color: $pink;
+    letter-spacing: 0;
+  }
+
+  @media (max-width: 1100px) {
+    width: 288px;
+    min-height: 629px;
+    padding: 30px 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 10px;
+
+    &:hover {
+      padding: 28px 18px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 25px;
+    }
+
+    &:nth-child(even) {
+      margin-left: 25px;
+    }
+
+    &:hover .price__button {
+      padding: 19px 58px 17px;
+    }
+  }
+
+  @media(max-width: 767px) {
+    margin: 0;
+    margin-bottom: 30px;
+    padding-bottom: 67px;
+    min-height: auto;
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    &:nth-child(even) {
+      margin-left: 0;
+    }
+
+    &:hover {
+      padding-bottom: 65px;
+    }
+  }
+}
+
+
+.price__tariffs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 38px;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
+}
+
+.price__tariffs-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  color: rgba(20, 21, 23, 0.7);
+  letter-spacing: -1.27273px;
+
+  @media (max-width: 1100px) {
+    font-size: 24px;
+    line-height: 38px;
+    margin-bottom: 5px;
+  }
+}
+
+.price__taroffs-cost {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34px;
+  color: $black-main;
+}
+
+.price__tariffs-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: $extra-black;
+  padding: 0 16px 26px 0;
+  border-bottom: 1px solid $black-special;
+  margin: 0;
+
+  @media (max-width: 1100px) {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0;
+    text-align: center;
+    padding-bottom: 8px;
+  }
+}
+
+.price__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (max-width: 1100px) {
+    margin-top: 22px;
+  }
+}
+
+.price__item {
+  font-size: 16px;
+  line-height: 32px;
+  color: $extra-black;
+  padding: 0 0 0 30px;
+  position: relative;
+  margin-bottom: 15px;
+
+  @media (max-width: 1100px) {
+    margin-bottom: 10px;
+  }
+}
+
+.price__column:first-child .price__item:first-child {
+  margin-bottom: 7px;
+
+  @media(max-width: 1023px) {
+    margin-bottom: 5px;
+  }
+}
+
+.price__column:hover .price__icon {
+  fill: black;
+}
+
+.price__icon {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  fill: $pink;
+}
+
+.price__button {
+  width: 310px;
+  margin-top: auto;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $pink;
+  border: none;
+  box-sizing: border-box;
+  padding: 30px 60px;
+
+  @media (max-width: 1100px) {
+    position: absolute;
+    width: 100%;
+    padding: 19px 60px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,123 @@
+.feedback {
+  min-width: 320px;
+
+  @media (max-width: 1023px) {
+    background-color: $white-special;
+  }
+}
+
+.feedback__container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding-left: 27px;
+  padding-right: 2px;
+  margin: 0 auto;
+
+  @media (max-width: 1023px) {
+    padding: 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 16px;
+  }
+}
+
+.feedback__inner {
+  min-height: 455px;
+  background-image: url("../img/feedback-bg.jpg");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 170px;
+
+  // @media (min-resolution: 2dppx) {
+  //   background-image: url("../img/feedback-bg@2x.jpg");
+  // }
+
+  @media (max-width: 1023px) {
+    background-size: cover;
+    justify-content: center;
+    padding-bottom: 2px;
+  }
+
+  @media (max-width: 767px) {
+    min-height: auto;
+    background-image: none;
+    background-color: $white-special;
+  }
+}
+
+.feedback__form {
+  box-sizing: border-box;
+  width: 656px;
+  min-height: 315px;
+  background-color: $white;
+  box-shadow: 0px 4px 30px $black-extra;
+  border-radius: 5px;
+  padding: 50px 50px 46px;
+  text-align: center;
+
+  @media (max-width: 1023px) {
+    min-height: 311px;
+  }
+
+  @media (max-width: 767px) {
+    width: auto;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background-color: inherit;
+  }
+}
+
+.feedback__title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  color: $black;
+  margin: 0;
+  margin-bottom: 12px;
+
+  @media (max-width: 767px) {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+}
+
+.feedback__text {
+  font-size: 16px;
+  line-height: 24px;
+  color: $black;
+  margin: 0;
+  margin-bottom: 24px;
+
+  @media (max-width: 767px) {
+    margin: 0px 0 18px;
+  }
+}
+
+.feedback__input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 21px;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+
+.feedback__input {
+  position: relative;
+  margin: 0;
+
+  @media (max-width: 767px) {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}

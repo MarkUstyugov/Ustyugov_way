@@ -1,0 +1,24 @@
+.button {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  font-family: inherit;
+  background-color: $pink;
+  color: $white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $extra-pink;
+  }
+
+  &:active {
+    background-color: $extra-pink;
+  }
+
+  @media (max-width: 1023px) {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
